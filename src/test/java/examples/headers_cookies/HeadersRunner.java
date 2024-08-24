@@ -2,7 +2,7 @@ package examples.headers_cookies;
 
 import com.intuit.karate.junit5.Karate;
 
-class HeadersCookiesRunner {
+class HeadersRunner {
 
     @Karate.Test
     Karate testHeaders() {
@@ -13,4 +13,11 @@ class HeadersCookiesRunner {
     Karate testCookies() {
         return Karate.run("cookies").relativeTo(getClass());
     }
+
+    @Karate.Test
+    Karate testXpath() {
+        return Karate.run("xpath").relativeTo(getClass());
+    }
+
+
 }
