@@ -13,4 +13,8 @@ Feature: karate test script
       When method get
       Then status 200
 
+      Scenario: Checking user specs of posts
+        Given url 'https://jsonplaceholder.typicode.com/posts?userId=1'
+        When method get
+
 
