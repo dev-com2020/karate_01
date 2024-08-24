@@ -5,7 +5,7 @@ import java.net.http.HttpResponse;
 
 public class GetUserPosts {
     public static void main(String[] args) {
-        String url = "https://jsonplaceholder.typicode.com/posts?userId=1";
+        String url = "https://jsonplaceholder.typicode.com/posts?userId=2";
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
