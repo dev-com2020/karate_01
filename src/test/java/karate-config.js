@@ -7,10 +7,9 @@ function fn() {
     }
 
     var config = {
-        env: env;
-        myVarName: 'someValue';
+        env: env,
+        myVarName: 'someValue'
     }
 
     return config;
-
 }
