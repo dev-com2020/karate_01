@@ -38,3 +38,16 @@ Feature: Posts tests
     When method post
     Then status 201
     And match responseType == 'json'
+
+  Scenario: Creating a new post with set
+    Given url 'https://jsonplaceholder.typicode.com'
+    And path 'posts'
+    * set payload
+      |path  |      |
+      |userId|103   |
+      |title |"test"|
+      |text  |"test"|
+    And request payload
+    When method post
+    Then status 201
+    And match responseType == 'json'
