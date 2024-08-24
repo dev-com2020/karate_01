@@ -47,3 +47,9 @@ Feature: karate test script
     * print "RESPONSE:", response[0]
     * print "Długość:", response.length
 
+  Scenario: Checking user specs of all posts if elements is table
+    Given url 'https://jsonplaceholder.typicode.com/posts?userId=3'
+    When method get
+    And match response == '#[10]? _.userId == 3'
+
+

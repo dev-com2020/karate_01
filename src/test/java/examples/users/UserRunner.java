@@ -8,4 +8,9 @@ public class UserRunner {
     Karate testUsers() {
         return Karate.run("users").relativeTo(getClass());
     }
+
+    @Karate.Test
+    Karate testPosts() {
+        return Karate.run("posts").relativeTo(getClass());
+    }
 }
