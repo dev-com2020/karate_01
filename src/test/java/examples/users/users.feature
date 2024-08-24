@@ -29,7 +29,21 @@ Feature: karate test script
   Scenario: Checking user specs of posts if contains then print
     Given url 'https://jsonplaceholder.typicode.com/posts?userId=2'
     When method get
-    And match response[0] contains { userId: 2, id: 11}
+    And match response[0] contains { userId: 2, id: 11, body: '#present', age: '#notpresent'}
+    * print "RESPONSE:", response[0]
+    * print "Długość:", response.length
+
+  Scenario: Checking user specs of posts if type is correct then print
+    Given url 'https://jsonplaceholder.typicode.com/posts?userId=2'
+    When method get
+    And match response[0] contains { userId: '#number', userId: 2, id: 11, body: '#string'}
+    * print "RESPONSE:", response[0]
+    * print "Długość:", response.length
+
+  Scenario: Checking user specs of all posts if type is correct then print
+    Given url 'https://jsonplaceholder.typicode.com/posts?userId=3'
+    When method get
+    And match each response contains { userId: '#number', userId: 3, id: '#number', body: '#string'}
     * print "RESPONSE:", response[0]
     * print "Długość:", response.length
 
