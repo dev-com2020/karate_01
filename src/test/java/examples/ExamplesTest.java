@@ -13,4 +13,11 @@ public class ExamplesTest {
                 .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
+    @Test
+    void testProd() {
+        Results results = Runner.path("classpath:examples")
+                .karateEnv("prod")
+                .parallel(2);
+        assertEquals(0, results.getFailCount(), results.getErrorMessages());
+    }
 }
