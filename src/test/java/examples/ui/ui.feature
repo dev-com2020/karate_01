@@ -1,7 +1,7 @@
 Feature: UI Test
 
   Background:
-    * configure driver = {type: 'chrome', webDriverSession: {args: ['--no-first-run','--no-default-browser-check']}}
+#    * configure driver = {type: 'chrome', webDriverSession: {args: ['--no-first-run','--no-default-browser-check']}}
 #    * configure driver = { type: 'chromedriver', showDriverLog: true }
 
   Scenario: First test
