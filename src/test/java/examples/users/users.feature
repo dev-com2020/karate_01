@@ -17,4 +17,7 @@ Feature: karate test script
         Given url 'https://jsonplaceholder.typicode.com/posts?userId=1'
         When method get
 
-
+  Scenario: Checking user specs of posts no.2
+    Given path 'posts'
+    When method get
+    And param userId = 1
