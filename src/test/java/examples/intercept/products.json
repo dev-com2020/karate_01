@@ -1,0 +1,13 @@
+{
+  "Items": [
+    {
+      "cat": "phone",
+      "desc": "To jest testowy produkt",
+      "id": 1,
+      "img": "https://dummyimage.com/200x200?text=Karate",
+      "price": 1234,
+      "title": "Test1"
+    }
+  ],
+  "LastEvaluatedKey": {"id": "9"}
+}
